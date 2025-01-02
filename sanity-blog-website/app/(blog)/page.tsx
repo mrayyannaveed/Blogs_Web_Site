@@ -98,7 +98,7 @@ export default async function Page() {
       )}
       {heroPost?._id && (
         <aside>
-          <h2 className="mb-8 text-6xl font-bold leading-tight tracking-tighter md:text-7xl">
+          <h2 className="mb-8 text-5xl md:text-6xl font-bold leading-tight tracking-tighter lg:text-7xl">
             More Stories
           </h2>
           <Suspense>
