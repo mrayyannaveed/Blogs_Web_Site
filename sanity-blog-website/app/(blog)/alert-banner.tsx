@@ -23,11 +23,11 @@ export default function AlertBanner() {
 
   return (
     <div
-      className= "fixed top-0 left-0 z-50 w-full border-b bg-white/95 text-black backdrop-blur"
+      className= "top-0 left-0 z-50 w-full border-b bg-black/95 text-white backdrop-blur opacity-50"
     >
-      <div className="py-2 text-center text-sm">
+      {/* <div className="py-2 text-center text-sm"> */}
         <Header/>
-      </div>
+      {/* </div> */}
     </div>
   );
 }

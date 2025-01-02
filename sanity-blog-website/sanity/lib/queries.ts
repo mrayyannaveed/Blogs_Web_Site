@@ -32,3 +32,7 @@ export const postQuery = defineQuery(`
     ${postFields}
   }
 `);
+
+// export const commentQuery = defineQuery(`
+//   *[_type == "comment" && post._ref == $postId && approved == true]
+// `);

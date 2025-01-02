@@ -15,6 +15,7 @@ import * as demo from "@/sanity/lib/demo";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { postQuery, settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
+import CommentSec from "../../commentSec/page";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -72,7 +73,7 @@ export default async function PostPage({ params }: Props) {
         </Link>
       </h2>
       <article>
-        <h1 className="text-balance mb-12 text-6xl font-bold leading-tight tracking-tighter md:text-7xl md:leading-none lg:text-8xl">
+        <h1 className="text-balance mb-12 text-4xl font-bold leading-tight tracking-tighter md:text-6xl md:leading-none lg:text-7xl">
           {post.title}
         </h1>
         <div className="hidden md:mb-12 md:block">
@@ -104,13 +105,14 @@ export default async function PostPage({ params }: Props) {
       </article>
       <aside>
         <hr className="border-accent-2 mb-24 mt-28" />
-        <h2 className="mb-8 text-6xl font-bold leading-tight tracking-tighter md:text-7xl">
-          Recent Stories
+        <h2 className="mb-8 text-4xl font-bold leading-tight tracking-tighter md:text-7xl">
+          Recent Blogs
         </h2>
         <Suspense>
-          <MoreStories skip={post._id} limit={2} />
+          <MoreStories skip={post._id} limit={3} />
         </Suspense>
       </aside>
+      <CommentSec/>
     </div>
   );
 }
